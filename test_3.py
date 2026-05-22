@@ -1,6 +1,7 @@
 amount_of_box = int(input("Nhập số thùng hợp lệ: "))
 result = ""
 total_product = 0
+count = 0
 for box in range(amount_of_box):
     product_quantity = int(input("Nhập số lượng hàng hóa: "))
     if product_quantity < 0:
@@ -11,8 +12,8 @@ for box in range(amount_of_box):
         break
     else: 
         total_product += product_quantity
-        result += f"\nThùng {box+1} có: {product_quantity} sản phẩm"    
+        count+=1   
     
         
-print(result)   
-print(f"\nTổng số lượng hàng hóa: {total_product}")
+print(f"\nTổng số thùng hợp lệ đếm được: {count}\n"  
+    f"Tổng số lượng hàng hóa: {total_product}")
